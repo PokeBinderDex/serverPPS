@@ -39,7 +39,7 @@ app.post('/create-checkout-session', express.json(), async (req, res) => {
       }],
       mode: 'payment',
       customer_email: email,
-      success_url: `${STATIC_SITE}/TESTPAY.html?access_token={CHECKOUT_SESSION_ID}`,
+      success_url: `${STATIC_SITE}/personalizedDex.html?access_token={CHECKOUT_SESSION_ID}`,
       cancel_url: `${STATIC_SITE}/payment-cancel.html`,
     });
     res.json({ id: session.id });

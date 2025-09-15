@@ -69,7 +69,7 @@ app.post('/webhook', (req, res) => {
       from: `"PokéBinderDex" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: 'Your PersonalizedDex Access',
-      text: `Thanks for your PersonalizedDex purchase!\n\nHere’s your access link in case you close the tab by mistake:\n\n${STATIC_SITE}/personalizedDex.html?access_token=${accessToken}\n\n⚠️ The link will remain valid only for a few minutes!`
+      text: `Thanks for your PersonalizedDex purchase!\n\nHere’s your access link in case you close the tab by mistake:\n\n${STATIC_SITE}/personalizedDex.html?access_token=${accessToken}\n\n⚠️ The link will remain valid for only a few dozen minutes.`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
